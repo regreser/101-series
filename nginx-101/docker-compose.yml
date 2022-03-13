@@ -1,0 +1,16 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  proxy:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./config-reverse-proxy/conf.d:/etc/nginx/conf.d
+      - ./config-reverse-proxy/logs:/var/log/nginx
+  web:
+    image: nginx:latest
+    ports:
+        - "8080:8080"
+    volumes:
+        - ./config-static-resources-server/conf.d:/etc/nginx/conf.d
+        - ./config-static-resources-server/logs:/var/log/nginx
