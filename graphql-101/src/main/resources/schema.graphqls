@@ -1,16 +1,19 @@
 type Query {
-  bookById(id: ID): Book
+  orderById(id: ID): Order
 }
 
-type Book {
+type Order {
+  id: ID
+  dish: Dish
+  customer: Customer
+}
+
+type Dish {
+   id: ID
+   name: String
+}
+
+type Customer {
   id: ID
   name: String
-  pageCount: Int
-  author: Author
-}
-
-type Author {
-  id: ID
-  firstName: String
-  lastName: String
 }

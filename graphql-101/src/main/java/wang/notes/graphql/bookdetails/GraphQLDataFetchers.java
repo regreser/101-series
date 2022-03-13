@@ -11,51 +11,66 @@ import java.util.Map;
 @Component
 public class GraphQLDataFetchers {
 
-    private static List<Map<String, String>> books = Arrays.asList(
-            ImmutableMap.of("id", "book-1",
-                    "name", "Harry Potter and the Philosopher's Stone",
-                    "pageCount", "223",
-                    "authorId", "author-1"),
-            ImmutableMap.of("id", "book-2",
-                    "name", "Moby Dick",
-                    "pageCount", "635",
-                    "authorId", "author-2"),
-            ImmutableMap.of("id", "book-3",
-                    "name", "Interview with the vampire",
-                    "pageCount", "371",
-                    "authorId", "author-3")
+    private static List<Map<String, String>> orders = Arrays.asList(
+            ImmutableMap.of("id", "order-1",
+                    "dishId", "dish-1",
+                    "customerId", "customer-1"),
+            ImmutableMap.of("id", "order-2",
+                    "dishId", "dish-2",
+                    "customerId", "customer-2"),
+            ImmutableMap.of("id", "order-3",
+                    "dishId", "dish-3",
+                    "customerId", "customer-3")
     );
 
-    private static List<Map<String, String>> authors = Arrays.asList(
-            ImmutableMap.of("id", "author-1",
-                    "firstName", "Joanne",
-                    "lastName", "Rowling"),
-            ImmutableMap.of("id", "author-2",
-                    "firstName", "Herman",
-                    "lastName", "Melville"),
-            ImmutableMap.of("id", "author-3",
-                    "firstName", "Anne",
-                    "lastName", "Rice")
+    private static List<Map<String, String>> dishes = Arrays.asList(
+            ImmutableMap.of("id", "dish-1",
+                    "name", "Doufu"),
+            ImmutableMap.of("id", "dish-2",
+                    "name", "Veg"),
+            ImmutableMap.of("id", "dish-3",
+                    "name", "Beaf")
     );
 
-    public DataFetcher getBookByIdDataFetcher() {
+    private static List<Map<String, String>> customers = Arrays.asList(
+            ImmutableMap.of("id", "customer-1",
+                    "name", "Mike"),
+            ImmutableMap.of("id", "customer-2",
+                    "name", "John"),
+            ImmutableMap.of("id", "customer-3",
+                    "name", "Jane")
+    );
+
+    public DataFetcher getOrderByIdDataFetcher() {
         return dataFetchingEnvironment -> {
-            String bookId = dataFetchingEnvironment.getArgument("id");
-            return books
+            String orderId = dataFetchingEnvironment.getArgument("id");
+            return orders
                     .stream()
-                    .filter(book -> book.get("id").equals(bookId))
+                    .filter(order -> order.get("id").equals(orderId))
                     .findFirst()
                     .orElse(null);
         };
     }
 
-    public DataFetcher getAuthorDataFetcher() {
+    public DataFetcher getDishDataFetcher() {
         return dataFetchingEnvironment -> {
-            Map<String,String> book = dataFetchingEnvironment.getSource();
-            String authorId = book.get("authorId");
-            return authors
+            Map<String,String> orders = dataFetchingEnvironment.getSource();
+            String dishId = orders.get("dishId");
+            return dishes
                     .stream()
-                    .filter(author -> author.get("id").equals(authorId))
+                    .filter(dish -> dish.get("id").equals(dishId))
+                    .findFirst()
+                    .orElse(null);
+        };
+    }
+
+    public DataFetcher getCustomerDataFetcher() {
+        return dataFetchingEnvironment -> {
+            Map<String,String> orders = dataFetchingEnvironment.getSource();
+            String customerId = orders.get("customerId");
+            return customers
+                    .stream()
+                    .filter(customer -> customer.get("id").equals(customerId))
                     .findFirst()
                     .orElse(null);
         };
