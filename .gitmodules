@@ -1,0 +1,3 @@
+[submodule "algrothm-101"]
+	path = algrothm-101
+	url = git@gmail.github.com:regreser/algrothm-101.git
