@@ -1,0 +1,4 @@
+172.19.0.1 - - [28/Apr/2021:05:31:57 +0000] "GET / HTTP/1.0" 200 612 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" "-"
+172.19.0.1 - - [28/Apr/2021:05:32:00 +0000] "GET /favicon.ico HTTP/1.0" 404 556 "http://localhost/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" "-"
+172.19.0.1 - - [28/Apr/2021:05:33:47 +0000] "GET /index HTTP/1.0" 404 556 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" "-"
+172.19.0.1 - - [28/Apr/2021:05:34:16 +0000] "GET /index.html HTTP/1.0" 200 612 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" "-"

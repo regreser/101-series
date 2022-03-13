@@ -1,0 +1,12 @@
+2021/04/28 05:27:08 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "localhost"
+2021/04/28 05:27:08 [warn] 31#31: *1 upstream server temporarily disabled while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "localhost"
+2021/04/28 05:27:08 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "localhost"
+2021/04/28 05:27:08 [warn] 31#31: *1 upstream server temporarily disabled while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "localhost"
+2021/04/28 05:27:09 [error] 31#31: *1 no live upstreams while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET /favicon.ico HTTP/1.1", upstream: "http://local/favicon.ico", host: "localhost", referrer: "http://localhost/"
+2021/04/28 05:29:22 [error] 31#31: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "localhost"
+2021/04/28 05:29:22 [warn] 31#31: *2 upstream server temporarily disabled while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "localhost"
+2021/04/28 05:29:22 [error] 31#31: *2 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "localhost"
+2021/04/28 05:29:22 [warn] 31#31: *2 upstream server temporarily disabled while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "localhost"
+2021/04/28 05:29:23 [error] 31#31: *2 no live upstreams while connecting to upstream, client: 172.19.0.1, server: w20z.cn, request: "GET /favicon.ico HTTP/1.1", upstream: "http://local/favicon.ico", host: "localhost", referrer: "http://localhost/"
+2021/04/28 05:31:43 [notice] 32#32: signal process started
+2021/04/28 05:35:32 [notice] 39#39: signal process started
